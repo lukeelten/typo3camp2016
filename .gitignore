@@ -157,3 +157,10 @@ pythontex-files-*/
 
 # Latexian
 TSWLatexianTemp*
+
+# Custom
+output
+*.log
+*.nav
+Presentation.pdf
+*main.pdf
