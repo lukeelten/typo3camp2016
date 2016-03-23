@@ -1,13 +1,34 @@
 \documentclass{beamer}
-\usetheme{metropolis}           % Use metropolis theme
+\usetheme{metropolis}
+
+        % Use metropolis theme
 \title{A minimal example}
+\subtitle{A minimal example}
 \date{22th April 2016}
 \author{Tobias Derksen}
 \institute{Fontys School of Technology \& Logistics}
+\setbeamertemplate{frame footer}{TYPO3camp Venlo 2016}
+
 \begin{document}
+  % First slide
   \maketitle
+
+  \begin{frame}{Table of contents}
+    \setbeamertemplate{section in toc}[sections numbered]
+    \tableofcontents[hideallsubsections]
+  \end{frame}
+
+
   \section{First Section}
   \begin{frame}{First Frame}
     Hello, world!
   \end{frame}
+  
+  \input{frameworks}
+  \input{composer}
+  
+	\section{Thank you for your attention.}
+	\begin{frame}[standout]
+		Any Questions?
+	\end{frame}
 \end{document}
