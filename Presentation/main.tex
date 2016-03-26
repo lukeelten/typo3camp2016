@@ -1,12 +1,23 @@
+% !TeX spellcheck = en_US
 \documentclass{beamer}
 \usetheme{metropolis}
 
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
 % Use metropolis theme
-\title{A minimal example}
-\subtitle{A minimal example}
+\title{Composer \& Frameworks}
+\subtitle{How they make development easier}
 \date{22th April 2016}
 \author{Tobias Derksen}
 \institute{Fontys School of Technology \& Logistics}
+\titlegraphic{\hfill\includegraphics[height=2cm]{logo.png}}
+
 \setbeamertemplate{frame footer}{TYPO3camp Venlo 2016}
 
 \begin{document}
@@ -19,16 +30,35 @@
   \end{frame}
 
 
-  \section{First Section}
-  \begin{frame}{First Frame}
-    Hello, world!
+  %\section{About me}
+  \begin{frame}{About me}
+
   \end{frame}
-  
+
   \input{frameworks}
   \input{composer}
-  
+
 	\section*{Thank you for your attention.}
 	\begin{frame}[standout]
 		Any Questions?
+	\end{frame}
+	
+	\appendix
+	
+	\begin{frame}{}
+		\textbf{This talk is freely available on GitHub.} \\
+		\url{https://github.com/lukeelten/typo3camp2016}
+		\vfill
+		\begin{center}
+			Creative Commons Attribution-ShareAlike 4.0 ~\\~\\
+			\ccbysa
+		\end{center}
+	\end{frame}
+	
+	\begin{frame}{Sources}
+		\begin{itemize}
+			\item \url{http://cakephp.org}
+			\item \url{http://bakery.cakephp.org}
+		\end{itemize}
 	\end{frame}
 \end{document}
