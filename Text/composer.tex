@@ -1,20 +1,36 @@
 % !TeX spellcheck = en_US
-\chapter{Composer - Dependency Management for PHP}
+\section{Composer - Dependency Management for PHP}
 
-\section{Why to use a dependency manager?}
+\subsection{Why to use a dependency manager?}
 - never forget to install a dependency
 - start using a project on a fresh platform automatically
 - keep everything up-to-date
 - keep track of what you need and what your dependencies need
 
 
-\section{Examples in other languages}
+\subsection{Examples in other languages}
 - maven (Java)
 - gem / bundler (Ruby)
 - cocoapods (Apple)
 - pip (Python)
 - npm / bower (Javascript, CSS)
 
-\section{How to use composer}
+\subsection{How to use composer}
+
+For using composer, a locally installed php version (>= 5.3.2) required.
+The installation on Linux and Macs is quite easy. The following command downloads the composer PHP Archive (composer.phar) and stores it in the current directory. 
+\begin{lstlisting}[language=bash]
+$ curl -sS https://getcomposer.org/installer | php
+$ ./composer.phar
+$ sudo mv composer.phar /usr/bin/composer
+$ composer
+\end{lstlisting}
+\captionof{lstlisting}{Bash commands to download and install composer}
+
+The installation on windows is also easy when there is an existing php installation with a working openssl extension. How to install php is out of the scope of this talk, please visit \url{www.php.net}.
+The composer file can easily be downloaded at \url{getcomposer.org} and can be used out of the working directory or can be placed inside PATH. 
+
+
+
 - show start script for new composer project
 - show installation of some famous dependency

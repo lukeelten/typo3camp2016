@@ -1,0 +1,102 @@
+\documentclass[a4paper,oneside,titlepage]{article}
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[pdftex]{graphicx} %%Grafiken in pdfLaTeX
+\usepackage{a4wide} %%Kleinere Seitenränder = mehr Text pro Zeile.
+\usepackage{longtable} %%Für Tabellen, die eine Seite überschreiten
+\usepackage{pdflscape}
+\usepackage{caption}
+\usepackage{float}
+%\usepackage[tablegrid,tocentry]{vhistory}
+\usepackage[tablegrid]{vhistory}
+\usepackage[nottoc]{tocbibind}
+\usepackage[toc,page]{appendix}
+\usepackage{pdfpages}
+\usepackage[rightcaption]{sidecap}
+\usepackage{cite}
+\usepackage[]{acronym}
+\usepackage[pdftex,scale={.8,.8}]{geometry}
+\usepackage{layout}
+\usepackage{subfigure}
+\usepackage{fancybox}
+\usepackage{fancyhdr}
+\usepackage[toc]{glossaries}
+\usepackage[left,pagewise,modulo]{lineno}
+\usepackage[pdftex,colorlinks=false,hidelinks,pdfstartview=FitV]{hyperref}
+\usepackage{listings}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+	backgroundcolor=\color{white},   % choose the background color
+	basicstyle=\footnotesize,        % size of fonts used for the code
+	breaklines=true,                 % automatic line breaking only at whitespace
+	captionpos=b,                    % sets the caption-position to bottom
+	commentstyle=\color{mygreen},    % comment style
+	escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+	keywordstyle=\color{blue},       % keyword style
+	stringstyle=\color{mymauve},     % string literal style
+	language=PHP,
+	frame=single,
+	numbers=left, 
+	numberstyle=\small
+}
+
+\usepackage{metainfo}
+
+\def\Company{}
+\def\Institute{\textit{Fontys School of Technology \& Logistics}}
+
+\def\BoldTitle{Composer \& Frameworks}
+\def\Subtitle{How they make development easier}
+\def\Authors{Tobias Derksen}
+
+
+\title{\textbf{\BoldTitle}\\\Subtitle}
+\author{\Authors \\ \Institute \\ \\ \\ \\}
+\date{Venlo, 22nd April 2016}
+
+
+
+% Generiert Deckblatt automatisch
+\AtBeginDocument{
+	\maketitle
+	\thispagestyle{empty}
+}
+
+% Generiert PDF Informationen
+\hypersetup{pdfinfo={
+		Title={\BoldTitle},
+		Author={\Authors},
+		Subject={\Subtitle}
+}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% DOKUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\setcounter{secnumdepth}{0}
+
+\DeclareGraphicsExtensions{.pdf,.jpg,.png}
+
+\newpage
+
+
+% Den Inhalt des Dokuments einbinden
+\include{intro}
+
+\include{composer}
+\include{frameworks}
+\input{zend}
+\input{cakephp}
+\input{symfony}
+\input{flow}
+
+
+
+\end{document}
