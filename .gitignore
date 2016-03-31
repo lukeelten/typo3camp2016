@@ -165,4 +165,5 @@ output
 *.log
 *.nav
 Presentation.pdf
+Text.pdf
 *main.pdf
