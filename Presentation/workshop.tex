@@ -1,0 +1,53 @@
+\section{Workshop}
+
+%\begin{frame}[standout]
+%	Demo
+%\end{frame}
+
+\begin{frame}{Installing composer}
+	\metroset{block=fill}
+	
+	\begin{block}{OSX}
+		brew install composer
+	\end{block}
+      
+	\begin{alertblock}{Linux}
+		Package Manager: \textit{composer} or \textit{php-composer} ~\\
+		Download .phar at \url{https://getcomposer.org/download}
+	\end{alertblock}
+      
+	\begin{exampleblock}{Windows}
+		Installation package on \url{https://getcomposer.org/download} ~\\
+		Existing PHP Installation required (e.g. XAMPP)
+	\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Using composer}
+	\metroset{block=fill}
+	
+	\begin{block}{General command}
+		composer OR php composer.phar
+	\end{block}
+	
+	\begin{block}{Create project}
+		composer create-project \textit{vendor}/\textit{projectname} \textit{target\_dir}
+	\end{block}
+	
+	\begin{block}{Install package}
+		composer require [-{}-dev] \textit{package\_name}
+	\end{block}
+	
+	\begin{block}{Use existing project}
+		composer install ~\\
+		composer update
+	\end{block}
+	
+\end{frame}
+
+\begin{frame}{Start CakePHP Project}
+	\metroset{block=fill}
+	
+	\begin{block}{Create Project}
+		composer create-project -{}-prefer-dist cakephp/app \textit{AppName}
+	\end{block}
+\end{frame}
