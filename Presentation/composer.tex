@@ -2,6 +2,11 @@
 \section{Composer - Dependency Management for PHP}
 
 \begin{frame}{What is Dependency Management?}
+	\begin{itemize}
+		\item Centralized dependency management
+		\item Manage dependencies versions
+		\item Automate parts of the build process
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Dependency Management in other languages}
@@ -14,6 +19,10 @@
 \end{frame}
 
 \begin{frame}{Why composer makes your life easier}
+	\begin{itemize}
+		\item Manage dependencies versions
+		\item Allows automated build process
+	\end{itemize}
 \end{frame}
 
 
@@ -34,8 +43,27 @@
 	\} ~\\
 \end{frame}
 
-\begin{frame}{Versioning Schema}
+\begin{frame}{Versioning Schemas}
+  \begin{table}
+  	\begin{tabular}{|c|c|}
+  		\toprule
+  		Constraint & Meaning\\
+  		\midrule
+  		2.0.1 & exactly 2.0.1 \\
+  		2.0.* & \textgreater= 2.0.0 \textless2.1.0\\
+  		\textgreater= 2.0 &  \\
+  		\~{}2.0 & \textgreater= 2.0.0 \textless3.0.0 \\
+  		\~{}2.0.0 & \textgreater= 2.0.0 \textless2.1.0 \\
+  		\^{}2.0.0 & \textgreater= 2.0.0 \textless3.0.0 \\
+  		1.0 - 2.0 & \textgreater= 1.0.0 \textless2.1 \\
+  		\bottomrule
+  	\end{tabular}
+  \end{table}
 \end{frame}
 
 \begin{frame}{Common mistakes}
+	\begin{itemize}
+		\item Version: \textgreater= 2.0.*
+		
+	\end{itemize}
 \end{frame}
